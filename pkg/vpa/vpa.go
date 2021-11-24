@@ -334,7 +334,7 @@ func (r Reconciler) getVPAObject(existingVPA *vpav1.VerticalPodAutoscaler, ns *c
 	if existingVPA == nil {
 		desiredVPA = vpav1.VerticalPodAutoscaler{
 			ObjectMeta: metav1.ObjectMeta{
-				Name:      controller.Name,
+				Name:      "goldilocks-" + controller.Name,
 				Namespace: ns.Name,
 			},
 		}
